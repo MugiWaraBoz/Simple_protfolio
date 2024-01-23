@@ -1,0 +1,18 @@
+10 HTML tags
+    1. nav
+    2. dic
+    3. a
+    4. ul
+    5. li
+    6. h1
+    7. p
+    8. span
+    9. strong
+    10. img
+
+5 Properties used in CSS
+    1. background-color
+    2. font-family
+    3. color
+    4. padding-right
+    5. padding-left

@@ -1,0 +1,54 @@
+/* Imported a GoogleFont name: Kanit */
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@100;300&display=swap');
+
+body {
+    background-color: #1B262C;
+    font-family: 'Kanit', sans-serif;
+    color: #BBE1FA;
+    padding-right: 0px;
+    padding-left: 0px;
+}
+
+.brand-size {
+    font-size: 2.5rem;
+}
+
+
+/* These are universal css, i used them to avoid repetition */
+.padding_list {
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+.margin-b-100 {
+    margin-bottom: 100px;
+}
+
+.fvh {
+    min-height: 100vh;
+}
+
+.img-edit {
+    border: solid 0px black;
+    border-radius: 20px;
+    width: 20rem;
+}
+
+.l-pad {
+    padding-left: 80px;
+}
+
+.l-mar {
+    margin-left: 40px
+}
+
+
+/* This css are for reveal effect on scroll on my webpage */
+.hidden {
+    opacity: 0;
+    transition: all 1s;
+}
+
+.show {
+    opacity: 1;
+}

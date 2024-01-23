@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+        <link href="styles.css" rel="stylesheet">
+        <title>My Webpage</title>
+    </head>
+
+    <body>
+      <!-- Navbar -->
+        <nav class="navbar bg-transparent navbar-dark d-flex px-5 text-center">
+            <div class="container-fluid ">
+              <a class="navbar-brand brand-size" href="#">Protfolio</a>
+              <div class=" flex-row-reverse">
+                <ul class="navbar-nav flex-row ">
+                  <li class="nav-item padding_list">
+                    <a class="nav-link active" href="#me">Me</a>
+                  </li>
+                  <li class="nav-item padding_list">
+                    <a class="nav-link" href="#projects">projets</a>
+                  </li>
+                  <li class="nav-item padding_list">
+                    <a class="nav-link" href="#footer">End</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+
+
+          <!-- Name & about -->
+          <div class="container text-center " id="me">
+            <div class="d-flex align-items-center justify-content-center fvh">
+              <div class="hidden text-center">
+                <h1>Hello, <span class="writer"></span></h1><br>
+                <p>Currently learning CS50x</p>
+              </div>
+            </div>
+            <div class="px-5 hidden margin-b-100">
+              <p class="fs-3"><strong>I like to build stuff using code!</strong></p>
+              <p class="fs-4">I am fascinated by the creation of software and games, and I thoroughly enjoy learning about code.
+                 My regular use of various applications has inspired me to explore their development processes.
+                 I am committed to enhancing my skills by delving into programming languages and frameworks.
+                 Staying updated on industry trends is crucial for my proficiency in software and game development.
+                 I am passionate about coding and look forward to the opportunities it presents.</p>
+            </div>
+          </div>
+
+
+          <!-- Project Section -->
+          <div class="container hidden mt-5" id="projects">
+            <p class="text-center h1 text-decoration-underline hidden margin-b-100">Projects</p>
+              <!-- Project 1 -->
+            <div class="d-sm-flex flex-lg-row flex-sm-column align-items-center justify-content-evenly margin-b-100">
+              <img class="img-fluid img-edit hidden" alt="Bookly" src="project-1.png">
+              <div class="m-5 hidden ">
+                <p class="h2 text-decoration-underline">Bookly: A place to find your All books</p>
+                <p class="fs-5">A book based concept Website</p>
+                <p class="fs-8">Language used: CSS, HTML</p>
+                <a class="link-warning link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover" href="https://mugiwaraboz.github.io/Bookly/">Check Website</a>
+              </div>
+            </div>
+
+              <!-- Project 2 -->
+            <div class="d-sm-flex flex-lg-row flex-sm-column align-items-center justify-content-evenly margin-b-100">
+              <img class="img-fluid img-edit hidden" alt="Hadid gen" src="project-2.png">
+              <div class="m-5 hidden">
+                <p class="h2 text-decoration-underline">Hadid gen, FAQ, Timer</p>
+                <p class="fs-5">A Website about hadid generator, FAQ section and a timer</p>
+                <p class="fs-8">Language used: CSS, HTML, JavaScript</p>
+                <a class="link-warning link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover" href="https://mugiwaraboz.github.io/Hadid-Gen/">Check Website</a>
+              </div>
+            </div>
+              <!-- Project 3 -->
+            <div class="d-sm-flex flex-lg-row flex-sm-column align-items-center justify-content-evenly margin-b-100">
+              <img class="hidden img-fluid img-edit" alt="HAMZA" src="project-3.png">
+              <div class="m-5 hidden">
+                <p class="h2 text-decoration-underline">Hamza: Perfume Website</p>
+                <p class="fs-5">A Website about perfumes, [design inspired form Gumroad]</p>
+                <p class="fs-8">Language used: CSS, HTML</p>
+                <a class="link-warning link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover" href="https://mugiwaraboz.github.io/Hamza/">Check Website</a>
+              </div>
+            </div>
+          </div>
+
+
+          <!-- Footer -->
+          <hr>
+          <div class="d-flex flex-column align-items-center justify-content-evenly hidden" style="height: 8rem;" id="footer">
+            <p class="h3" style="margin-top: 6px;">Created by MugiWara</p>
+            <p>For CS50</p>
+          </div>
+
+
+          <!-- JavaScript -->
+          <script>
+
+            // on scroll effect
+              const checker = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
+                  if (entry.isIntersecting) {
+                    entry.target.classList.add('show');
+                  }
+                })
+              })
+
+              const hiddenElement = document.querySelectorAll('.hidden');
+              hiddenElement.forEach((el) => checker.observe(el))
+
+
+              // Type writer effect
+              let initial = 0;
+              let text = "I'm MugiWara,";
+              let speed_of_writting = 200;
+
+              function typeWritterEffect() {
+                if (initial < text.length) {
+                  document.querySelector('.writer').innerHTML += text.charAt(initial);
+                  initial++;
+                  setTimeout(typeWritterEffect, speed_of_writting);
+                }
+              }
+
+              // Calling the function to execute it
+              typeWritterEffect()
+
+          </script>
+
+    </body>
+</html>
